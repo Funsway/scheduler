@@ -13,6 +13,7 @@ class Bootstrap {
         10: argument
          */
         $url = isset($_GET['url']) ? $_GET['url'] : null;
+        
         //print_r($url);
         $url = rtrim($url, '/');
         $url = filter_var($url, FILTER_SANITIZE_URL);
@@ -37,7 +38,9 @@ class Bootstrap {
             return;
         }
         
-        $controllerName = $url[0].'Controller';
+        $controllerName = ucfirst ($url[0]).'Controller';
+        $modelName = ucfirst ($url[0]);
+        
         $file = basePathForRequire . 'controllers/'.$controllerName.'.php'; //load controller
         
         if(file_exists($file))
@@ -46,7 +49,7 @@ class Bootstrap {
             
             $controller = new $controllerName;
             
-            $controller->loadModel($url[0]);
+            $controller->loadModel($modelName);
             
             if(isset($url[1]))
             {

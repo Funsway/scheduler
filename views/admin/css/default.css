@@ -1,0 +1,115 @@
+.main-header-search {
+    background-color: hsl(0,3%,33%);
+    background-image:   url('http://i.imgur.com/zqZfaSF.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    height: 60px;
+}
+.inputSearch {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.25em;
+  font-weight: 200;
+  height: 100%;
+  outline: 0;
+  width: 100%;
+  padding: 0 160px 0 80px;
+}
+
+.section-search-results {
+  background-color: fade-out(#1bb334,.2);
+  display: none;
+  overflow-y: scroll;
+  padding: 0 30px;
+  position: relative;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-results-employees {
+    width: 30%;
+  float: left;
+}
+.search-results-rooms {
+    width: 30%;
+  border: left:2px dashed #003366;
+  float: left;
+}
+.search-results-committees {
+    width: 30%;
+  border: left:2px dashed #003366;
+  float: left;
+}
+
+a{
+	text-decoration: none;
+    color: hsl(0,3%,33%);
+    font-size: 1.0em;
+    font-weight: 200;
+    padding: 5px 0;
+}
+a:hover {
+  color: hsl(0,50%,33%);
+  font-size: 1.2em;
+}
+
+li{
+  color: hsl(0,3%,33%);
+  display: none;
+  font-size: 1.5em;
+  font-weight: 200;
+  padding: 5px 0;
+}
+li:hover {
+  color: hsl(0,50%,33%);
+}
+
+h2 {
+  border-bottom: 1px solid fade-out(#138025,.6);
+  color: hsl(0,3%,33%);
+  font-size: .8em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  text-transform: uppercase;
+}
+
+
+
+
+
+.info{
+	display: none;
+	padding: 10px;
+}
+
+p{
+    outline:none;
+    background: none;
+    font-weight:normal;
+    font-size:16px;
+}
+.inputText{
+    padding: 8px;
+    width:250px;
+    outline:none;
+    border:none;
+    border-bottom:1px solid #c4c4c4;
+    background: none;
+    background-image: linear-gradient(90deg,#c4c4c4 1px, #c4c4c4 1px, rgba(0,0,0,0.0) 0px), linear-gradient(90deg, #c4c4c4 1px, #c4c4c4 1px, rgba(0,0,0,0.0) 0px);
+    background-position: bottom left, bottom right;
+    background-size: 1px 5px;
+    background-repeat:no-repeat;
+    font-weight:normal;
+    font-size:16px;      
+}
+.inputText:focus{
+    border-bottom-color:#0093c7;
+    background-image: linear-gradient(90deg, #00A3D9 1px, #00A3D9 1px, rgba(0,0,0,0.0) 0px), linear-gradient(90deg, #00A3D9 1px, #00A3D9 1px, rgba(0,0,0,0.0) 0px);
+  }
+

@@ -3,14 +3,17 @@
 class View {
 
     public $js;
+    public $css;
     public $publicJs;
     public $publicCss;
+    
+    public $data;
     
     function __construct() {
      
     }
     
-    public function render($name, $header = true, $footer = true, $noInclude = false)
+    public function render($name, $header = true, $footer = true, $menue=true, $noInclude = false)
     {
         if($noInclude == true)
         {

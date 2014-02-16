@@ -1,9 +1,10 @@
 <?php
 class Signin extends Model
 {
-
+    private $db;
     public function __construct() {
         parent::__construct();
+        $this->db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS);
     }
     public function run()
     {
@@ -23,12 +24,19 @@ class Signin extends Model
         {
             Session::init();
             Session::set('role', $data['role']);
+            Session::set('id', $data['id']);
             Session::set('signedIn', true);
-            header('location: '.basePath.'Dashboard');
+            if($data['role'] == 'admin')
+            {
+                header('location: '.basePath.'admin');
+            }
+            else {
+                header('location: '.basePath.'employee');
+            }
         }
         else
         {
-            header('location: '.basePath.'Signin');
+            header('location: '.basePath.'signin');
         }
     }
     
